@@ -58,61 +58,30 @@ export const About = () => {
 
   return (
     <>
-      <style jsx>{`
-        .animate-fadeInLeft {
-          animation: fadeInLeft 0.8s ease-out forwards;
-        }
-        .animate-fadeInRight {
-          animation: fadeInRight 0.8s ease-out forwards;
-        }
-
-        @keyframes fadeInLeft {
-          from {
-            opacity: 0;
-            transform: translateX(-30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-
-        @keyframes fadeInRight {
-          from {
-            opacity: 0;
-            transform: translateX(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-      `}</style>
-
       <section
         id="acerca-de"
-        className="pt-26 py-24 max-w-5xl mx-auto flex flex-col gap-25"
+        className="pt-26 py-24 max-w-5xl mx-auto flex flex-col gap-25 px-4 sm:px-6 lg:px-8"
       >
-        <h2 className="text-3xl font-bold text-center">
+        <h2 className="text-2xl sm:text-3xl font-bold text-center">
           Acerca de <span className="text-primary">Mi</span>
         </h2>
 
-        <div className="grid grid-cols-2 text-center gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 text-center gap-8 lg:gap-8">
           <div
             ref={leftRef}
-            className={`flex flex-col gap-8 items-center ${
+            className={`flex flex-col gap-6 sm:gap-8 items-center order-1 ${
               isLeftVisible ? "animate-fadeInLeft" : "opacity-0 -translate-x-8"
             }`}
           >
-            <h3 className="font-semibold text-2xl">
+            <h3 className="font-semibold text-xl sm:text-2xl text-center lg:text-left">
               Desarrollador web apasionado y creador de tecnología
             </h3>
-            <p>
+            <p className="text-sm sm:text-base text-center lg:text-left">
               Con más de 2 años de experiencia en desarrollo web, me especializo
               en crear aplicaciones web responsivas, accesibles y de alto
               rendimiento utilizando tecnologías modernas.
             </p>
-            <p>
+            <p className="text-sm sm:text-base text-center lg:text-left">
               Me apasiona crear soluciones elegantes a problemas complejos y
               constantemente aprendo nuevas tecnologías y técnicas para
               mantenerme a la vanguardia del panorama web en constante
@@ -125,43 +94,49 @@ export const About = () => {
 
           <div
             ref={rightRef}
-            className={`grid grid-rows-3 grid-cols-1 gap-5 ${
+            className={`grid grid-cols-1 md:grid-cols-2 lg:grid-rows-3 lg:grid-cols-1 gap-4 sm:gap-5 order-2 ${
               isRightVisible ? "animate-fadeInRight" : "opacity-0 translate-x-8"
             }`}
           >
-            <Card className="flex flex-row gap-3 justify-center px-4">
+            <Card className="flex flex-col sm:flex-row gap-3 justify-center items-center sm:items-start px-4 py-4">
               <div className="bg-black/20 w-fit h-fit p-2.5 rounded-full">
-                <Code className="text-primary" />
+                <Code className="text-primary w-5 h-5 sm:w-6 sm:h-6" />
               </div>
-              <div className="text-start">
-                <h4 className="font-semibold">Desarrollo Web</h4>
-                <p>
+              <div className="text-center sm:text-start">
+                <h4 className="font-semibold text-sm sm:text-base">
+                  Desarrollo Web
+                </h4>
+                <p className="text-xs sm:text-sm">
                   Creación de sitios web y aplicaciones web responsivas con
                   estilos modernos.
                 </p>
               </div>
             </Card>
 
-            <Card className="flex flex-row gap-3 justify-center px-4">
+            <Card className="flex flex-col sm:flex-row gap-3 justify-center items-center sm:items-start px-4 py-4">
               <div className="bg-black/20 w-fit h-fit p-2.5 rounded-full">
-                <User className="text-primary" />
+                <User className="text-primary w-5 h-5 sm:w-6 sm:h-6" />
               </div>
-              <div className="text-start">
-                <h4 className="font-semibold">Diseño UI/UX</h4>
-                <p>
+              <div className="text-center sm:text-start">
+                <h4 className="font-semibold text-sm sm:text-base">
+                  Diseño UI/UX
+                </h4>
+                <p className="text-xs sm:text-sm">
                   Diseño de interfaces de usuario intuitivas y experiencias de
                   usuario fluidas.
                 </p>
               </div>
             </Card>
 
-            <Card className="flex flex-row gap-3 justify-center px-4">
+            <Card className="flex flex-col sm:flex-row gap-3 justify-center items-center sm:items-start px-4 py-4">
               <div className="bg-black/20 w-fit h-fit p-2.5 rounded-full">
-                <Briefcase className="text-primary" />
+                <Briefcase className="text-primary w-5 h-5 sm:w-6 sm:h-6" />
               </div>
-              <div className="text-start">
-                <h4 className="font-semibold">Gestión de proyectos</h4>
-                <p>
+              <div className="text-center sm:text-start">
+                <h4 className="font-semibold text-sm sm:text-base">
+                  Gestión de proyectos
+                </h4>
+                <p className="text-xs sm:text-sm">
                   Liderando proyectos desde su concepción hasta su finalización
                   con metodologías ágiles.
                 </p>

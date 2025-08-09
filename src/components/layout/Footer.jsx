@@ -3,22 +3,24 @@ import React from "react";
 export const Footer = () => {
   return (
     <>
-      <footer className="flex flex-col gap-10 pt-28 pb-5">
-        <div className="text-center font-semibold text-gray-300">
-          <h3 className="text-primary">Redes Sociales</h3>
-          <p className="text-gray-700 dark:text-gray-300">
+      <footer className="flex flex-col gap-6 sm:gap-8 lg:gap-10 pt-16 sm:pt-20 lg:pt-28 pb-5 px-4 sm:px-6 lg:px-8">
+        <div className="text-center font-semibold text-gray-300 max-w-2xl mx-auto">
+          <h3 className="text-primary text-lg sm:text-xl lg:text-2xl mb-2 sm:mb-3">
+            Redes Sociales
+          </h3>
+          <p className="text-gray-700 dark:text-gray-300 text-sm sm:text-base">
             Sigueme en redes para estar al tanto de las ultimas novedades,
             historias y mucho mas.
           </p>
         </div>
-        <div className="flex flex-wrap justify-center gap-5">
+        <div className="flex flex-row justify-center gap-4 sm:gap-5 items-center">
           <a
             href="https://www.linkedin.com/in/steban-pineda-b56826379/"
             target="_blank"
-            className="flex items-center gap-2.5 px-4 py-2.5 rounded-full text-gray-400 border-1 transition-all duration-300 ease-in-out no-underline hover:text-white hover:bg-blue-600"
+            className="flex items-center justify-center gap-2 px-6 py-2.5 rounded-full text-gray-400 border-1 transition-all duration-300 ease-in-out no-underline hover:text-white hover:bg-blue-600 w-32"
           >
-            Linkedin
-            <div className="w-5 h-5">
+            <span className="text-sm">LinkedIn</span>
+            <div className="w-4 h-4 flex-shrink-0">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -34,10 +36,10 @@ export const Footer = () => {
           <a
             href="https://github.com/StebanPi"
             target="_blank"
-            className="flex items-center gap-2.5 px-4 py-2.5 rounded-full text-gray-400 border-1 transition-all duration-300 ease-in-out no-underline hover:text-white hover:bg-black"
+            className="flex items-center justify-center gap-2 px-6 py-2.5 rounded-full text-gray-400 border-1 transition-all duration-300 ease-in-out no-underline hover:text-white hover:bg-black w-32"
           >
-            Github
-            <div className="w-5 h-5">
+            <span className="text-sm">Github</span>
+            <div className="w-4 h-4 flex-shrink-0">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -51,7 +53,7 @@ export const Footer = () => {
             </div>
           </a>
         </div>
-        <p className="text-gray-500 text-center text-sm">
+        <p className="text-gray-500 text-center text-xs sm:text-sm px-4">
           © 2025 StebanPi. Todos los derechos reservados.
         </p>
       </footer>
